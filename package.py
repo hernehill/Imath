@@ -31,8 +31,8 @@ variants = [
 def commands():
     env.REZ_IMATH_ROOT = "{root}"
     env.Imath_ROOT = "{root}"
-    env.Imath_DIR = "{root}/lib64/cmake/Imath"
-    env.PATH.append("{root}/lib64")
+    env.Imath_DIR = "{root}/lib/cmake/Imath"
+    env.PATH.append("{root}/lib")
 
     if "python" in resolve:
         python_ver = resolve["python"].version
