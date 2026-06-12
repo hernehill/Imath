@@ -44,6 +44,9 @@ set(IMATH_LIBTOOL_AGE 0)
 set(IMATH_LIB_VERSION "${IMATH_LIBTOOL_CURRENT}.${IMATH_LIBTOOL_REVISION}.${IMATH_LIBTOOL_AGE}")
 set(IMATH_LIB_SOVERSION ${IMATH_LIBTOOL_CURRENT})
 
+if(MSVC)
+    add_compile_options(/bigobj)
+endif()
 # ImathSetup.cmake declares all the configuration variables visible
 # in cmake-gui or similar and the rest of the global
 # project setup. Check the context to see what is configurable.
