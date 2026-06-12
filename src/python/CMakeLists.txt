@@ -133,7 +133,7 @@ pyimath_extract_rel_sitearch(PyImath_Python${Python_VERSION_MAJOR}_SITEARCH_REL 
 ### NB: We are turning this on globally by default as the boost
 ###     generated cmake config files seem to be broken and they
 ###     cross-wire python 2 with 3 in the same variables
-option(Boost_NO_BOOST_CMAKE "Disable boost-provided cmake config" ON)
+option(Boost_NO_BOOST_CMAKE "Disable boost-provided cmake config" OFF)
 if(Boost_NO_BOOST_CMAKE)
   message(STATUS "Disabling boost-provided cmake config. If this causes problems, consider setting Boost_NO_BOOST_CMAKE variable to OFF")
 endif()
