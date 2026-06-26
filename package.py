@@ -33,6 +33,7 @@ def commands():
     env.Imath_ROOT = "{root}"
     env.Imath_DIR = "{root}/lib/cmake/Imath"
     env.PATH.append("{root}/lib")
+    env.PATH.append("{root}/bin")
 
     if "python" in resolve:
         env.PYTHONPATH.append("{root}/lib")
