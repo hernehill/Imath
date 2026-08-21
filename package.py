@@ -1,6 +1,6 @@
 name = "imath"
 
-version = "3.1.5.hh.1.0.0"
+version = "3.1.5.hh.1.0.1"
 
 authors = [
     "ILM & AcademySoftwareFoundation",
@@ -19,7 +19,7 @@ requires = [
     "boost",
 ]
 
-private_build_requires = []
+private_build_requires = ["visual_studio"]
 
 variants = [
     ["python-3.9"],
