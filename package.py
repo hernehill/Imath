@@ -37,6 +37,7 @@ def commands():
 
     if "python" in resolve:
         env.PYTHONPATH.append("{root}/lib")
+        env.UE_PYTHONPATH.append("{root}/lib")
 
 
 uuid = "repository.Imath"
