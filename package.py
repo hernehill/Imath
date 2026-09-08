@@ -1,6 +1,6 @@
 name = "imath"
 
-version = "3.1.5.hh.1.0.1"
+version = "3.1.5.hh.1.0.2"
 
 authors = [
     "ILM & AcademySoftwareFoundation",
@@ -32,7 +32,10 @@ def commands():
     env.REZ_IMATH_ROOT = "{root}"
     env.Imath_ROOT = "{root}"
     env.Imath_DIR = "{root}/lib/cmake/Imath"
-    env.PATH.append("{root}/lib")
+    env.LIB.append("{root}/lib")
+    env.LD_LIBRARY_PATH.append('{root}/bin')
+    # Renamed output (IMATH_LIB_SUFFIX) avoids colliding with Maya's own
+    # bundled Imath-3_1.dll, which is missing exports OCIO needs.
     env.PATH.append("{root}/bin")
 
     if "python" in resolve:
