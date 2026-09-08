@@ -1,6 +1,6 @@
 name = "imath"
 
-version = "3.1.5.hh.1.0.2"
+version = "3.1.5.hh.1.0.3"
 
 authors = [
     "ILM & AcademySoftwareFoundation",
