@@ -1,3 +1,8 @@
 build/
 _build/
 _install/
+
+# HH
+_rez_build
+.vscode
+.idea
