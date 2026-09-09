@@ -34,7 +34,11 @@ def commands():
     env.REZ_IMATH_ROOT = "{root}"
     env.Imath_ROOT = "{root}"
     env.Imath_DIR = "{root}/lib64/cmake/Imath"
+    env.IMATH_INCLUDE_DIR = "{root}/include"
     env.LD_LIBRARY_PATH.append("{root}/lib64")
+
+    if building:
+        env.CMAKE_MODULE_PATH.append("{root}/lib64/cmake/Imath")
 
     if "python" in resolve:
         python_ver = resolve["python"].version
