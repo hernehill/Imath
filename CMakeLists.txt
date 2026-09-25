@@ -87,7 +87,7 @@ add_subdirectory(src/Imath)
 # downstream projects where to find Imath, via find_package(Imath).
 set(Imath_DIR "${CMAKE_CURRENT_BINARY_DIR}/config" CACHE PATH "" FORCE)
 
-option(PYTHON "Set ON to compile boost PyImath bindings")
+option(PYTHON "Set ON to compile boost PyImath bindings" ON) # Marcelo: was OFF
 if (PYTHON)
   add_subdirectory(src/python)
 endif()
