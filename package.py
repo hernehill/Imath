@@ -21,11 +21,6 @@ requires = [
 private_build_requires = []
 
 variants = [
-    ["python-3.7", "boost-1.82"],
-    ["python-3.9", "boost-1.82"],
-    ["python-3.10", "boost-1.82"],
-    ["python-3.11", "boost-1.82"],
-    # ["python-3.12", "boost-1.82"],
     ["python-3.13.9", "boost-1.88"],
     ["python-3.13.10", "boost-1.88"],
 ]
@@ -44,17 +39,7 @@ def commands():
     if "python" in resolve:
         python_ver = resolve["python"].version
         if python_ver.major == 3:
-            if python_ver.minor == 7:
-                env.PYTHONPATH.append("{root}/lib/python3.7/site-packages")
-            elif python_ver.minor == 9:
-                env.PYTHONPATH.append("{root}/lib/python3.9/site-packages")
-            elif python_ver.minor == 10:
-                env.PYTHONPATH.append("{root}/lib/python3.10/site-packages")
-            elif python_ver.minor == 11:
-                env.PYTHONPATH.append("{root}/lib/python3.11/site-packages")
-            elif python_ver.minor == 12:
-                env.PYTHONPATH.append("{root}/lib/python3.12/site-packages")
-            elif python_ver.minor == 13:
+            if python_ver.minor == 13:
                 env.PYTHONPATH.append("{root}/lib/python3.13/site-packages")
 
 
